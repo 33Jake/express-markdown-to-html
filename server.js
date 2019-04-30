@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const showdown = require("showdown");
 const bodyParser = require("body-parser");
@@ -55,7 +59,7 @@ app.post(
   }
 );
 
-const port = process.env.PORT || 8080;
+const port = process.env.REACT_APP_API_PORT || 8080;
 app.listen(port, function() {
   console.log(`Server running on port ${port}`);
 });
