@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+  color: $white;
+  font: 16px $primary-font-stack;
+  background: $dark-grey;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
