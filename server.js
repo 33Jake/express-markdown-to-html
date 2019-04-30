@@ -15,12 +15,12 @@ app.use(express.static(path.join(__dirname, "build")));
 let converter = new showdown.Converter();
 
 app.post("/convert", function(req, res) {
-  if (typeof req.body.content == "undefined" || req.body.content == null) {
+  if (typeof req.body.markdown == "undefined" || req.body.markdown == null) {
     res.json(["error", "No data found"]);
   } else {
-    let text = req.body.content;
+    let text = req.body.markdown;
     let html = converter.makeHtml(text);
-    res.json(["markdown", html]);
+    res.json(html);
   }
 });
 

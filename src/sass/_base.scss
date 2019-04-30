@@ -11,6 +11,30 @@ html {
   box-sizing: inherit;
 }
 
-.text-center {
+h1 {
   text-align: center;
+}
+
+textarea {
+  @include size(100%, 200px);
+  @include transition(all 0.3s ease);
+  display: block;
+  background: $white;
+  color: $black;
+  border: 1px solid $light-grey;
+  margin-bottom: 10px;
+}
+
+button {
+  @include size(100%, 32px);
+  @include transition(all 0.3s ease);
+  display: block;
+  line-height: 32px;
+  background: $white;
+  border: none;
+  color: $black;
+  @include on-event(false) {
+    background: darken($white, 25%);
+    cursor: pointer;
+  }
 }
